@@ -1,0 +1,35 @@
+body a {
+    text-decoration: none !important;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.chose-item {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 3px 3px 9px 3px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+    padding: 37px 15px;
+    text-align: center;
+
+}
+
+.item img {
+    height: 128px;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.item img:hover{
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+.cat_name {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
