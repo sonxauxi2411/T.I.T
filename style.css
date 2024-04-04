@@ -1,35 +1,171 @@
 body a {
-    text-decoration: none !important;
-    color: #333;
-    cursor: pointer;
+  text-decoration: none !important;
+  color: #333;
+  cursor: pointer;
+}
+body {
 }
 
-
 .chose-item {
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 3px 3px 9px 3px rgba(0, 0, 0, 0.16);
-    overflow: hidden;
-    height: 250px;
-    width: 250px;
-    padding: 37px 15px;
-    text-align: center;
-
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 3px 3px 9px 3px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  height: 250px;
+  width: 250px;
+  padding: 37px 15px;
+  text-align: center;
 }
 
 .item img {
-    height: 128px;
-    width: auto;
-    margin-bottom: 30px;
+  height: 128px;
+  width: auto;
+  margin-bottom: 30px;
 }
 
-.item img:hover{
-    transform: scale(1.2);
-    transition: transform 1s;
+.item img:hover {
+  transform: scale(1.2);
+  transition: transform 1s;
 }
 
 .cat_name {
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.banner {
+  background-color: aqua;
+  width: 100%;
+  height: 300px;
+}
+
+.header {
+}
+
+.header-title {
+}
+
+.header-adress {
+  color: #7d7d7d !important;
+}
+
+.header-adress span:hover {
+  color: rgba(13, 110, 253);
+  cursor: pointer;
+}
+
+.header-adress a {
+  color: #7d7d7d !important;
+}
+.header-adress a:hover {
+  color: rgba(13, 110, 253) !important;
+  cursor: pointer;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Màu nền header khi được thêm class */
+  z-index: 9999;
+}
+
+@keyframes stuckMoveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.block-item {
+  position: relative;
+  display: flex;
+  color: #e42014;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s all linear;
+  text-transform: uppercase;
+  align-items: center;
+  gap: 30px;
+}
+
+.img-center {
+  margin: auto;
+  width: unset;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-adress a {
+    font-size: 12px;
+  }
+
+  .header-adress span {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header-adress {
+    flex-direction: column !important ;
+    gap: 0px !important;
+  }
+  .header-title {
+    display: none !important;
+  }
+  .block-item img {
+    width: 32px;
+    height: 52px ;
+  }
+  .block-item p {
+    width: 30px;
+    font-size: 10px;
+
+  }
+  .block-item{
+    gap: 10px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 992px) {
+
+  .block-item p {
+   font-size: 12px;
+  }
+  .block-item ::after {
+    content: "";
+    width: 40px;
+    height: 60px;
+    background: url(https://chamsocdidong.com/image/next.svg) center center
+      no-repeat;
+    background-size: 38px;
+    position: absolute;
+    right: 1%;
+    top: 0px;
+  }
+
+}
+
+@media only screen and (min-width :992px ){
+    .block-item ::after {
+        content: "";
+        width: 40px;
+        height: 60px;
+        background: url(https://chamsocdidong.com/image/next.svg) center center
+          no-repeat;
+        background-size: 38px;
+        position: absolute;
+        right: 15%;
+        top: 0px;
+      }
+      
 }
